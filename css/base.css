@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR&display=swap');
+
+/* font-family: 'Great Vibes', cursive; */
+/* font-family: 'Noto Serif KR', serif; */
+/* font-weight:500; */
+body{
+    font-family: 'IBM Plex Sans KR', '맑은 고딕', sans-serif;
+    font-size:12px;
+}
+a{color:#222;
+    text-decoration:none;
+}
+
+footer > nav{float:left;
+}
+footer > nav a{color:#fff;
+line-height:20px;
+padding:0px 20px;
+}
+address > p {
+    line-height: 20px;
+    padding: 0px 30px;
+    font-size: 10px;
+}

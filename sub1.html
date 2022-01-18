@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <title>WELCOME YELLOWSTONE</title>
+        <link rel="shortcut icon" type="./image/x-icon" href="./images/yspop.ico">
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/layout.css" rel="stylesheet" type="text/css">
+    <link href="./css/sub.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+    <!-- 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./js/prefixfree.min.js"> </script>
+    <script src="./js/swiper.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#box').hide();
+            $('section > p ').hide();
+            $('h2').animate({
+                'left': '30px'
+            }, 1000);
+            $('#box').slideDown(1200);
+            $('section > p').delay(1300).slideDown(300);
+            $('section > article').delay(1400).animate({ //bottom:50px;    left:30px; 
+                'bottom': '50px',
+                'left': '50px',
+                'opacity': '1'
+            }, 600);
+
+
+            let n = 0;
+            let Timer = setInterval(function () {
+
+                if (n == 5) {
+                    n = 0;
+                } else {
+                    n++;
+                    $('.slide_wrap').animate({
+                        'top': '-' + (n * 600)
+                    }, 500);
+                    $('.list > ul > li').css('opacity', '0');
+                    $('.list > ul > li').eq(n - 1).stop().animate({
+                        'opacity': '1'
+                    }, 400);
+                }
+            }, 2000);
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1><a href="index.html" title="메인페이지이동"><img src="./images/YSLOGO.svg"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="sub1.html" title="ABOUT">ABOUT</a></li>
+                    <li><a href="sub2.html" title="MAPS">MAPS</a></li>
+                    <li><a href="sub3.html" title="WILDLIFE">WILDLIFE</a></li>
+                    <li><a href="sub4.html" title="GALLERY">GALLERY</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="box">&nbsp;</div>
+            <div id="box2">&nbsp;</div>
+            <section>
+                <h2>About</h2>
+                <p><span>옐로스톤 국립공원은 1872년에 설정된 세계 최초의 국립공원입니다.</span> 몬태나주・와이오밍주・아이다호주에 걸쳐 있으며, 5개의 공원 입구 중 3개가 몬태나주 안에
+                    있습니다. 이곳에는 고산 호수나 강・간헐천・비등(沸騰)하는 진흙 연못 등이 있으며, 수많은 간헐천이 있는 곳으로 세계적으로 유명합니다. 또한,
+                    말코손바닥사슴・바이슨(들소)・회색곰・늑대 등 수많은 야생 동물의 서식지이며 독수리・매・휘파람고니 등 조류의 모습도 즐길 수 있습니다. 봄과 여름에는 야생화가 빛나는 색채를,
+                    겨울에는 눈부시게 아름다운 눈과 얼음을 볼 수 있습니다.</p>
+                <article>
+                    <h5>논</h5>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <h2>Before 11,000 Years </h2>
+                                <h3>미국 원주민이 거주하다</h3>
+                                <p> 최소 11000년 전부터 미국 인디언들의 터전이었다 </p>
+                                <span class="line">&nbsp;</span>
+                                <span class="one">&nbsp;</span>
+
+                            </li>
+                            <li>
+                                <h2>1806</h2>
+                                <h3>루이스와 클라크 탐험대가 발견</h3>
+                                <p>옐로우 스톤을 발견하고 그림으로 기록하다</p>
+                                <span class="line">&nbsp;</span>
+                                <span class="one">&nbsp;</span>
+                            </li>
+                            <li>
+                                <h2>1871</h2>
+                                <h3>헤이든 지질 탐험대의 노력</h3>
+                                <p>1872 옐로스톤 국립공원을 수립하게 한 헌정법이 수립되었다</p>
+                                <span class="line">&nbsp;</span>
+                                <span class="one">&nbsp;</span>
+                            </li>
+                            <li>
+                                <h2>1950s</h2>
+                                <h3>“미션 66”을 수행</h3>
+                                <p>전쟁 후 국립공원은 현대화 프로젝트를 거쳐 재정비되었다 </p>
+                                <span class="line">&nbsp;</span>
+                                <span class="one">&nbsp;</span>
+                            </li>
+                            <li>
+                                <h2> 1978</h2>
+                                <h3>UN 세계유산으로 지정</h3>
+                                <p>벨기에 뢰벤, 덴호른 양조장에서 시작</p>
+                                <span class="line">&nbsp;</span>
+                                <span class="one">&nbsp;</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="container">
+                        <ul class="slide_wrap">
+                            <li class="slide"><img src="./images/his.jpg" alt="사진"></li>
+                            <li class="slide"><img src="./images/his.jpg" alt="사진"></li>
+                            <li class="slide"><img src="./images/his2.jpg" alt="사진"></li>
+                            <li class="slide"><img src="./images/his3.jpg" alt="사진"></li>
+                            <li class="slide"><img src="./images/his4.jpg" alt="사진"></li>
+                            <li class="slide"><img src="./images/his5.jpg" alt="사진"></li>
+                        </ul>
+                    </div>
+
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <nav>
+                <p><a href="#" title="개인정보처리방침">개인정보처리방침</a>
+                    <a href="#" title="이용약관">이용약관</a>
+                    <a href="#" title="고객센터">고객센터</a>
+                </p>
+            </nav>
+            <address>
+                <p>Address&#58;
+                    PO Box 168 &#47; Yellowstone National Park &#44; WY 82190&#45;0168 &#124; 
+                    Phone&#58;
+                    307&#45;344&#45;7381 &#124; COPYRIGHT 2021 &copy; Rahyeri ALL RIGHT RESERVED.</p>
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

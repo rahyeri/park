@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatable" content="IE=edge">
+        <title>WELCOME YELLOWSTONE</title>
+        <link rel="shortcut icon" type="./image/x-icon" href="./images/yspop.ico">
+        <link href="./css/base.css" rel="stylesheet" type="text/css">
+        <link href="./css/reset.css" rel="stylesheet" type="text/css">
+        <link href="./css/sub4.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        <style></style>
+        <!-- 스크립트 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="./js/prefixfree.min.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script>
+            $(document).ready(function () {
+                let n = $('section > article > ul > li img').index();
+                const g_nav = $('section > article > ul > li');
+                g_nav.click(function () {
+                    n = $(this).index();
+                    console.log(n);
+                    $('section > article > div img').attr('src', './images/g' + n + '.jpg').css('opacity', '0').animate({
+                        'opacity': '1'
+                    }, 300);
+                    $(this).children().css('filter', 'brightness(1.2)');
+                    $(this).siblings().children().css('filter', 'brightness(0.8)');
+                });
+                $('i.fa-angle-right').click(function () {
+                    if (n == 10) {
+                        n = 0
+                    } else {
+                        n++;
+                    }
+                    $('section > article > div img').attr('src', './images/g' + n + '.jpg').css('opacity', '0').animate({
+                        'opacity': '1'
+                    }, 300);
+                    g_nav.eq(n).children().css('filter', 'brightness(1.2)');
+                    g_nav.eq(n).siblings().children().css('filter', 'brightness(0.8)');
+                });
+                $('i.fa-angle-left').click(function () {
+                    if (n == 0) {
+                        n = 10
+                    } else {
+                        n--;
+                    }
+                    $('section > article > div img').attr('src', './images/g' + n + '.jpg').css('opacity', '0').animate({
+                        'opacity': '1'
+                    }, 300);
+                    g_nav.eq(n).children().css('filter', 'brightness(1.2)');
+                    g_nav.eq(n).siblings().children().css('filter', 'brightness(0.8)');
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <header>
+                <h1>
+                    <a href="index.html" title="메인페이지이동"><img src="./images/logoblack.png"></a>
+                </h1>
+                <nav>
+                    <ul class="gnb">
+                        <li>
+                            <a href="sub1.html" title="ABOUT">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="sub2.html" title="MAPS">MAPS</a>
+                        </li>
+                        <li>
+                            <a href="sub3.html" title="WILDLIFE">WILDLIFE</a>
+                        </li>
+                        <li>
+                            <a href="sub4.html" title="GALLERY">GALLERY</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <h2>Gallery</h2>
+                    <article>
+                        <h5>논</h5>
+                        <ul>
+                            <li><img src="./images/g0.jpg" alt="온천이미지"></li>
+                            <li><img src="./images/g1.jpg" alt="산이미지"></li>
+                            <li><img src="./images/g2.jpg" alt="산이미지"></li>
+                            <li><img src="./images/g3.jpg" alt="온천이미지"></li>
+                            <li><img src="./images/g4.jpg" alt="산이미지"></li>
+                            <li><img src="./images/g5.jpg" alt="온천이미지"></li>
+                            <li><img src="./images/g6.jpg" alt="온천이미지"></li>
+                            <li><img src="./images/g7.jpg" alt="들판이미지"></li>
+                            <li><img src="./images/g8.jpg" alt="들판이미지"></li>
+                            <li><img src="./images/g9.jpg" alt="산이미지"></li>
+                            <li><img src="./images/g10.jpg" alt="온천이미지"></li>
+                        </ul>
+                        <div>
+                            <a href="#" title="갤러리"><img src="./images/g0.jpg" alt="폭포이미지"></a>
+                        </div>
+                        <i class="fas fa-angle-right"></i>
+                        <i class="fas fa-angle-left"></i>
+                    </article>
+                </section>
+            </main>
+
+            <footer>
+                <nav>
+                    <p>
+                        <a href="#" title="개인정보처리방침">개인정보처리방침</a>
+                        <a href="#" title="이용약관">이용약관</a>
+                        <a href="#" title="고객센터">고객센터</a>
+                    </p>
+                </nav>
+                <address>
+                    <p>Address&#58;
+                        PO Box 168 &#47; Yellowstone National Park &#44; WY 82190&#45;0168 &#124;
+                        Phone&#58;
+                        307&#45;344&#45;7381 &#124; COPYRIGHT 2021 &copy; Rahyeri ALL RIGHT RESERVED.</p>
+                </address>
+            </footer>
+        </div>
+    </body>
+
+</html>
